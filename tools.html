@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>navagation bar</title>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<script type="text/javascript" src="script.js"></script>
+		<meta name="viewport" content="width=device-width intial-scale=1">
+		<meta charset="utf-8">
+		<script type="text/javascript">
+			function active(){
+				var searchBar = document.getElementById("searchBar");
+				
+				if(searchBar.value = "Search..."){
+					searchBar.value = ''
+					searchBar.placeholder = "search..."
+					
+				}
+			}	
+		    function inactive(){
+				var searchBar = document.getElementById("searchBar");
+				
+				if(searchBar.value == ''){
+					searchBar.value = "search..."
+					searchBar.placeholder = ''
+				}
+			}
+		</script>
+	<style>
+body {
+	font-family: sans-serif;
+}
+.box {
+	text-align: center;
+	padding-top: px;
+	width: 250px;
+	-webkit-transition: all .2s;
+	background: #adad85;
+	line-height: 50px;
+	text-align: center;
+	font-weight: bold;
+	color: #333;
+	border-radius: 5px;
+	box-shadow: 0px 0px 2px rgba(0,0,0,.5);
+		1px 1px 5px rgba(0,0,0,.3);
+	cursor: pointer;	
+	position: absolute;
+	top: 230px;
+	left: 12%;
+	
+}
+.box:hover {
+	background: skyblue;
+	color: #e3e3e3;
+}
+	a:link{
+width:130px;
+display:block;
+padding:15px;
+color:white;
+text-decoration:none;
+font-family:verdana;
+font-size:20px;
+text-align:center;
+text-transform:uppercase;
+}
+input[type=text] {
+    margin-top:20px;
+	width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 100%;
+}	
+.footer {
+
+margin: ;
+width: px;
+padding: px;
+background: ;
+border: 1px solid #000000;
+}	
+.main_container	{
+margin: auto;
+width: px;
+background: ;
+border: ;
+min-height: 630px;
+}
+#searchBar {
+	border: 1px solid #000000;
+    border-right: none;
+	font-size: 16px;
+	padding: 10px;
+	outline: none;
+	width: 250px;
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-moz-border-radius-topleft:10px;
+	-moz-border-radius-bottomleft:10px;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	 }
+#searchBtn {
+	border: 1px solid #000000;
+    font-size: 16px;
+	padding: 10px;
+	background: #0059b3;
+	font-weight: bold;
+	cursor: pointer;
+	outline: none;
+    -webkit-border-top-right-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	-moz-border-radius-topright:10px;
+	-moz-border-radius-bottomright:10px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+#searchBtn:hover {
+	background: #80bfff;
+}
+.container{
+	width:900px;
+	height:355px;
+	padding:1px;
+	border:px solid gray;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	background: ;	
+	margin-left: 450px;
+	top: 100px;
+	position: absolute;
+}
+.slider_wrapper{
+	overflow: hidden;
+	position:relative;
+	height:280px;
+	top:auto;
+}
+#image_slider{
+
+	position: relative;
+	height: auto;
+	list-style: none;
+	overflow: hidden;
+	float: left;
+	/*Chrom default padding for ul is 40px */
+	padding:0px;
+	margin:0px;
+}
+#image_slider li{
+	position: relative;
+	float: left;
+}
+.nvgt{
+	position:absolute;
+	top: 120px;
+	height: 50px;
+	width: 30px;
+	opacity: 0.6;
+}
+.nvgt:hover{
+	opacity: 0.9;
+}
+#prev{
+	background: #000 url('https://dl.dropboxusercontent.com/u/65639888/image/prev.png') no-repeat center;
+	left: 0px;
+}
+#next{
+	background: #000 url('https://dl.dropboxusercontent.com/u/65639888/image/next.png') no-repeat center;
+	right: 0px;
+}
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+	top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+	margin-top: 0px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+	margin-top: 0px;
+	position: absolute;
+	margin-bottom: 0px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+#button {
+    width: 10em;
+	height: em;
+	border: 2px solid grey;
+    background: ;
+    border-radius: 5px;
+}
+a {
+    display: block;
+    width: 100%;
+    line-height: 2em;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+}
+a:hover {
+    color: red;
+    background: #eff;
+}
+#searchBar {
+	border: 1px solid #000000;
+	margin-left: 450px;
+    border-right: none;
+	font-size: 16px;
+	padding: 10px;
+	outline: none;
+	width: 350px;
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-moz-border-radius-topleft:10px;
+	-moz-border-radius-bottomleft:10px;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	 }
+#searchBtn {
+	border: 1px solid #000000;
+    font-size: 16px;
+	padding: 10px;
+	background: #002db3;
+	font-weight: bold;
+	cursor: pointer;
+	outline: none;
+    -webkit-border-top-right-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	-moz-border-radius-topright:10px;
+	-moz-border-radius-bottomright:10px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+#searchBtn:hover {
+	background: #4d79ff;
+}
+	</style>
+	</head>
+<body>
+
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+	<div id="header">
+		<div id="logo">
+			<img src="C:\Users\mpc\Desktop\responsive tool page\tooloookup.png"/>
+		<ul id="navbar">
+			<li><a href="home.html">Home</a></li>
+			<li><a href="tools.html" id="onlink">Tools</a></li>
+			<li><a href="products.html">Products</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="login.html">login</a></li>
+		<li>
+ <form action="http://www.google.com" method="get" id="search-box">
+  <input type="text" name="search" name="q" maxlength="120" placeholder="Search..">
+</form>
+
+</li>
+		</ul>
+	</div>
+	
+ <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="home.html">Home</a>
+  <a href="products.html">Products</a>
+  <a href="about.html">About</a>
+  <a href="login.html">Login</a>
+  <a href="contact.html">contacts</a>
+</div>
+
+<div id="main">
+ 
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+</div>
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+<p>BRAND</p>
+
+<form action="/action_page.php">
+  <select name="tools">
+	<option Value="3-in-One">3-in-One</option>
+	<option value="3M">3M</option>
+	<option value="4Sevens">4sevens</option>
+	<option value="80/20">80/20</option>
+	<option value="909">909</option>
+	<option value="A2Z Corp">A2Z Corp</option>
+	<option value="Accu-Gage">Accu-Gage</option>
+	<option value="Accu-GageAccu-Gage">Accu-GageAccu-Gage</option>
+	<option value="AccuSharp">AccuSharp</option>
+	<option value="Accutrax">Accutrax</option>
+	<option value="ACDelco">ACDelco</option>
+	<option value="Adventure Tool Company">Adventure Tool Company</option>
+	<option value="AEG">AEG</option>
+	<option value="Agilent">Agilent</option>
+	<option value="Air Foxx">Air Foxx</option>
+	<option value="Air Systems">Air Systems</option>
+	<option value="Airlessco">Airlessco</option>
+	<option value="Akro-Mils">Akro-Mils</option>
+	<option value="Alc">Alc</option>
+	<option value="Allsource">Allsource</option>
+	<option value="All-Spec">All-Spec</option>
+	<option value="All-Star">All-Star</option>
+	<option value="Allen">Allen</option>
+	<option value="Allied">Allied</option>
+	<option value="Allit">Allit</option>
+	<option value="Altendorf">Altendorf</option>
+	<option value="Amana Tool">Amana Tool</option>
+	<option value="Amazon">Amazon</option>
+	<option value="AmazonBasics">AmazonBasics</option>
+	<option value="Ames true temper">Ames true temper</option>
+	<option value="American Hammer">American Hammer</option>
+	<option value="American pneumatic tools">American pneumatic tools</option>
+	<option value="Amprobe">Amprobe</option>	
+	<option value="Anex">Anex</option>
+	<option value="Anker">Anker</option>
+	<option value="Ansell">Ansell</option>
+	<option value="Anso Knives">Anso Knives</option>
+	<option value="Apex">Apex</option>
+	<option value="Apollo">Apollo</option>
+	<option value="Arduino">Arduino</option>
+	<option value="Armor">Armor</option>
+	<option value="Armor Tool">Armor Tool</option>
+	<option value="Arp">Arp</option>
+	<option value="Armstrong">Armstrong</option>
+	<option value="Arsenal">Arsenal</option>
+	<option value="Astro Pneumatic">Astro</option>
+	<option value="Astro Pneumatic">Astro Pneumatic</option>
+	<option value="Atwood">Atwood</option>
+	<option value="Auto meter">Auto meter</option>
+	<option value="Bad Dog Tools">Bad Dog Tools</option>
+	<option value="Bahco">Bahco</option>
+	<option value="Bahco">Bayco</option>
+	<option value="Becker">Becker</option>
+	<option value="Benchcrafted">Benchcrafted</option>
+	<option value="Bench Dog">Bench Dog</option>
+	<option value="Benchmade">Benchmade</option>
+	<option value="Benchmark">Benchmark</option>
+	<option value="Belzer">Belzer</option>
+	<option value="Bessey">Bessey</option>
+	<option value="Beta">Beta</option>
+	<option value="Big Ass Lights">Big Ass Lights</option>
+	<option value="Big Gator">Big Gator</option>
+	<option value="Black & Decker">Black & Decker</option>
+	<option value="Blackhawk">Blackhawk</option>
+	<option value="Blaklader">Blaklader</option>
+	<option value="Blaklader">Blair</option>
+	<option value="Blokkz">Blokkz</option>
+	<option value="BluCave">BluCave</option>
+	<option value="Blue Hawk">Blue Hawk</option>
+	<option value="Blue Ridge Knives">Blue Ridge Knives</option>
+	<option value="Blue Ridge point">Blue point</option>
+	<option value="Bondhus">Bondhus</option>
+	<option value="Bonney">Bonney</option>
+	<option value="Bora">Bora</option>
+	<option value="Bosch">Bosch</option>
+	<option value="Bostitch">Bostitch</option>
+	<option value="Bovidix">Bovidix</option>
+	<option value="Bradford Knives">Bradford Knives</option>
+	<option value="Bremen">Bremen</option>
+	<option value="Bridge City Tool Works">Bridge City Tool Works</option>
+	<option value="Brous Blades">Brous Blades</option>
+	<option value="Brown Dog Welding">Brown Dog Welding</option>
+	<option value="Buck">Buck</option>
+	<option value="Bucket Boss">Bucket Boss</option>
+	<option value="BN Products">BN Products</option>
+	<option value="C.H. Hanson">C.H. Hanson</option>
+	<option value="Cadex">Cadex</option>
+	<option value="California Air Tools">California Air Tools</option>
+	<option value="CamelBak">CamelBak</option>
+	<option value="Camo">Camo</option>
+	<option value="Campbell Hausfeld">Campbell Hausfeld</option>
+	<option value="Capstone">Capstone</option>
+	<option value="CarbonLite">CarbonLite</option>
+	<option value="Carborundum">Carborundum</option>
+	<option value="Case">Case</option>
+	<option value="Casio">Casio</option>
+	<option value="CAT">CAt</option>
+	<option value="Caulk Savers">Caulk Savers</option>
+	<option value="Central machinery">Central machinery</option>
+	<option value="Cen Tech">Cen Tech</option>
+	<option value="CE Tools">CE Tools</option> 
+	<option value="CDI Torque Products">CDI Torque Products</option>
+	<option value="Chamberlain">Chamberlain</option>
+	<option value="Channellock">Channellock</option>
+	<option value="Checkpoint">Checkpoint</option>
+	<option value="Chestnut Tools">Chestnut Tools</option>
+	<option value="Chicago brand">Chicago brand</option>
+	<option value="Chicago Electric">Chicago Electric</option>
+	<option value="Chicago Latrobe">Chicago Latrobe</option>
+	<option value="Chicago Pneumatic">Chicago Pneumatic</option>
+	<option value="ClampIt">ClampIt</option>
+	<option value="Clauss">Clauss</option>
+	<option value="Cleco">Cleco</option>
+	<option value="Coast">Coast</option>
+	<option value="Cobalt">Cobalt</option>
+	<option value="Coilhose">Coilhose</option>
+	<option value="Cole-Bar">Cole-Bar</option>
+	<option value="Columbian">Columbian</option>
+	<option value="Commercial Electric">Commercial Electric</option>
+	<option value="Comp cams">Comp cams</option>
+	<option value="Conrader">Conrader</option>
+	<option value="Core Bore">Core Bore</option>
+	<option value="Core cut">Core cut</option>
+	<option value="Craftsman">Craftsman</option>
+	<option value="Cree">Cree</option>
+	<option value="Crescent">Crescent</option>
+	<option value="CRKT">CRKT</option>
+	<option value="Csr">Csr</option>
+	<option value="Custom LeatherCraft">Custom LeatherCraft</option>
+	<option value="Cutech">Cutech</option>
+	<option value="Cyalume">Cyalume</option>
+	<option value="CyberPower">CyberPower</option>
+	<option value="Dake">Dake</option>
+	<option value="Dake">Dagger</option>
+	<option value="Dake">Danmar</option>
+	<option value="DAP">DAP</option>
+	<option value="Dasco Pro">Dasco Pro</option>
+	<option value="Davies Molding">Davies Molding</option>
+	<option value="Dead-On">Dead-On</option>
+	<option value="Decibullz">Decibullz</option>
+	<option value="Defiant">Defiant</option>
+	<option value="Dell">Dell</option>
+	<option value="Delta">Delta</option>
+	<option value="Devilbiss">Devilbiss</option>
+	<option value="Dewalt">Dewalt</option>
+	<option value="Diablo">Diablo</option>
+	<option value="DieHard">DieHard</option>
+	<option value="Dixon">Dixon</option>
+	<option value="DMT">DMT</option>
+	<option value="Dotco">Dotco</option>
+	<option value="Doyle">Doyle</option>
+	<option value="Dremel">Dremel</option>
+	<option value="Drill Master">Drill Master</option>
+	<option value="DRILLNADO">DRILLNADO</option>
+	<option value="Drill Sergeant">Drill Sergeant</option>
+	<option value="Dripless">Dripless</option>
+	<option value="DualSaw">DualSaw</option>
+	<option value="Duck">Duck</option>
+	<option value="Duo-Fast">Duo-Fast</option>
+	<option value="Dura-Grit">Dura-Grit</option>
+	<option value="Duracell">Duracell</option>
+	<option value="Duralast">Duralast</option>
+	<option value="Duratrax">Duratrax</option>
+	<option value="Durham">Durham</option>
+	<option value="DustBubble">DustBubble</option>
+	<option value="Dust Right">Dust Right</option>
+	<option value="Diamond products">Diamond products</option>
+	<option value="Dynamic">Dynamic</option>
+	<option value="Eastwood">Eastwood</option>
+	<option value="Earthquake">Earthquake</option>
+	<option value="EB Tool Co">EB Tool Co</option>
+	<option value="Echo">Echo</option>
+	<option value="Eco-i-Lite">Eco-i-Lite</option>
+	<option value="edelbrock">edelbrock</option>
+	<option value="Edwards">Edwards</option>
+	<option value="Edwards Ironworkers">Edwards Ironworkers</option>
+	<option value="Ego">Ego</option>
+	<option value="Elzetta">Elzetta</option>
+	<option value="Empire">Empire</option>
+	<option value="Empire Level">Empire Level</option>
+	<option value="Energizer">Energizer</option>
+	<option value="Enerpac">Enerpac</option>
+	<option value="Engineer Inc">Engineer Inc</option>
+	<option value="Erem">Erem</option>
+	<option value="Ergodyne">Ergodyne</option>
+	<option value="Ernst">Ernst</option>
+	<option value="ESEE">ESEE</option>
+	<option value="ESEE RAT">ESEE RAT</option>
+	<option value="Estwing">Estwing</option>
+	<option value="Etekcity">Etekcity</option>
+	<option value="Evolution">Evolution</option>
+	<option value="Excel">Excel</option>
+	<option value="Extech">Extech</option>
+	<option value="EyeLock">EyeLock</option>
+	<option value="EZ Red">EZ Red</option>
+	<option value="Elektra Beckum">Elektra Beckum</option>
+	<option value="Facom">Facom</option>
+	<option value="Fastcap">Fastcap</option>
+	<option value="Fein">Fein</option>
+	<option value="Feit">Feit</option>
+	<option value="Felo">Felo</option>
+	<option value="Fenix">Fenix</option>
+	<option value="Ferrum Forge">Ferrum Forge</option>
+	<option value="Festool">Festool</option>
+	<option value="Field Notes">Field Notes</option>
+	<option value="Fiilex">Fiilex</option>
+	<option value="Filson">Filson</option>
+	<option value="Final Cut">Final Cut</option>
+	<option value="Finish Line Caulk System">Finish Line Caulk System</option>
+	<option value="Fisher">Fisher</option>
+	<option value="Fiskars">Fiskars</option>
+	<option value="Fit">Fit</option>
+	<option value="Fix It Sticks">Fix It Sticks</option>
+	<option value="FIXT">FIXT</option>
+	<option value="Flex">Flex</option>
+	<option value="Flexcut">Flexcut</option>
+	<option value="Flexzilla">Flexzilla</option>
+	<option value="Flipout">Flipout</option>
+	<option value="FLIR">FLIR</option>
+	<option value="Fluke">Fluke</option>
+	<option value="Foredom">Foredom</option>
+	<option value="FourSevens">FourSevens</option>
+	<option value="Freud">Freud</option>
+	<option value="Fronius">Fronius</option>
+	<option value="Fuller">Fuller</option>
+	<option value="Gardina">Gardina</option>
+	<option value="Gardner Bender">Gardner Bender</option>
+	<option value="Gator Finishing">Gator Finishing</option>
+	<option value="GearArmour">GearArmour</option>
+	<option value="Gearwrench">Gearwrench</option>
+	<option value="Gedore">Gedore</option>
+	<option value="Gedore">Generac</option>
+	<option value="General Tools">General Tools</option>
+	<option value="Genesis">Genesis</option>
+	<option value="Gerber">Gerber</option>
+	<option value="Gerstner">Gerstner</option>
+	<option value="Giottos">Giottos</option>
+	<option value="Gladiator">Gladiator</option>
+	<option value="Gojo">Gojo</option>
+	<option value="Goldblatt">Goldblatt</option>
+	<option value="GoodYear">GoodYear</option>
+	<option value="Gorilla Glue">Gorilla Glue</option>
+	<option value="Gorilla Tape">Gorilla Tape</option>
+	<option value="Grace">Grace</option>
+	<option value="Graco">Graco</option>
+	<option value="Gray Tools">Gray Tools</option>
+	<option value="Grayvik">Grayvik</option>
+	<option value="Great Neck">Great Neck</option>
+	<option value="Greenlee">Greenlee</option>
+	<option value="Green Toys">Green Toys</option>
+	<option value="GreenWorks">GreenWorks</option>
+	<option value="Grex">Grex</option>
+	<option value="Griot's Garage">Griot's Garage</option>
+	<option value="Grip-on">Grip-on</option>
+	<option value="Grizzly">Grizzly</option>
+	<option value="Grobet">Grobet</option>
+	<option value="Greenlee">Greenlee</option>
+	<option value="GRS">GRS</option>
+	<option value="Gys">Gys</option>
+	<option value="Gyros">Gyros</option>
+	<option value="Hakko">Hakko</option>
+	<option value="Hammerhead">Hammerhead</option>
+	<option value="Hansen">Hansen</option>
+	<option value="Harbor Freight">Harbor Freight</option>
+	<option value="Hardcore Hardware">Hardcore Hardware</option>
+	<option value="Harley-Davidson">Harley-Davidson</option>
+	<option value="Harper Trucks">Harper Trucks</option>
+	<option value="Hart">Hart</option>
+	<option value="Hart Tools">Hart Tools</option>
+	<option value="Hatch">Hatch</option>
+	<option value="Haul Master">Haul Master</option>
+	<option value="Hazet">Hazet</option>
+	<option value="HCL">HCL</option>
+	<option value="Hercules">Hercules</option>
+	<option value="HexBright">HexBright</option>
+	<option value="Hex Pro">Hex Pro</option>
+	<option value="Hilti">Hilti</option>
+	<option value="Hitachi">Hitachi</option>
+	<option value="HK1">HK1</option>
+	<option value="HK Porter">HK Porter</option>
+	<option value="HKP">HKP</option>
+	<option value="Hobby Creek">Hobby Creek</option>
+	<option value="Hole Dozer">Hole Dozer</option>
+	<option value="Homelite">Homelite</option>
+	<option value="HomeRight">HomeRight</option>
+	<option value="Honda">Honda</option>
+	<option value="Hoover">Hoover</option>
+	<option value="HTC">HTC</option>
+	<option value="Huot">Huot</option>
+	<option value="Hulley">Hulley</option>
+	<option value="Husky">Husky</option>
+	<option value="Husqvarna">Husqvarna</option>
+	<option value="Hutchins">Hutchins</option>
+	<option value="Hyrel 3D">Hyrel 3D</option>
+	<option value="i-drill">i-drill</option>
+	<option value="Icon">Icon</option>
+	<option value="Ics">Ics</option>
+	<option value="Ideal">Ideal</option>
+	<option value="Ideal Industries">Ideal Industries</option>
+	<option value="iFixit">iFixit</option>
+	<option value="iGaging">iGaging</option>
+	<option value="Ikea">Ikea</option>
+	<option value="Imperial">Imperial</option>
+	<option value="Imperial Blades">Imperial Blades</option>
+	<option value="Incra">Incra</option>
+	<option value="Ingersoll Rand">Ingersoll Rand</option>
+	<option value="Innovative Tools International">Innovative Tools International</option>
+	<option value="Inova">Inova</option>
+	<option value="International">International</option>
+	<option value="Ion">Ion</option>
+	<option value="Irazola">Irazola</option>
+	<option value="Irega">Irega</option>
+	<option value="IRW">IRW</option>
+	<option value="Irwin">Irwin</option>
+	<option value="IsoTunes">IsoTunes</option>
+	<option value="ITW">ITW</option>
+	<option value="ITW">Iwata</option>
+	<option value="Izzy Swan">Izzy Swan</option>
+	<option value="Jacobs">Jacobs</option>
+	<option value="JessEm">JessEm</option>
+	<option value="Jet">Jet</option>
+	<option value="JH Williams">JH Williams</option>
+	<option value="Jobox">Jobxox</option>
+	<option value="Joby">Joby</option>
+	<option value="Joes Racing">Joes Racing</option>
+	<option value="Johnson Level & Tool">Johnson Level & Tool</option>
+	<option value="Jorgensen">Jorgensen</option>
+	<option value="Ka-Bar">K tool</option>
+	<option value="Ka-Bar">Ka-Bar</option>
+	<option value="Kant-Twist">Kant-Twist</option>
+	<option value="Kapro">Kapro</option>
+	<option value="KC Tool">KC Tool</option>
+	<option value="KD Tools">KD Tools</option>
+	<option value="Keo">Keo</option>
+	<option value="Kershaw">Kershaw</option>
+	<option value="Keter">Keter</option>
+	<option value="Kett">Kett</option>
+	<option value="Kett">Keyso tools</option>
+	<option value="Keysight Technologies">Keysight Technologies</option>
+	<option value="Kidde">Kidde</option>
+	<option value="Kirk Wrench">Kirk Wrench</option>
+	<option value="Klarus">Klarus</option>
+	<option value="Klecker">Klecker</option>
+	<option value="Klein">Klein</option>
+	<option value="Knaack">Knaack</option>
+	<option value="Knew Concepts">Knew Concepts</option>
+	<option value="Knipex">Knipex</option>
+	<option value="Kobalt">Kobalt</option>
+	<option value="Komeleon">Komeleon</option>
+	<option value="Krazy Glue">Krazy Glue</option>
+	<option value="Kreg">Kreg</option>
+	<option value="Kronus">Kronus</option>
+	<option value="Kurvenlinfix">Kurvenlinfix</option>
+	<option value="Kwickan">Kwickan</option>
+	<option value="Kyocera">Kyocera</option>
+	<option value="LadderLimb">LadderLimb</option>
+	<option value="LaGesse">LaGesse</option>
+	<option value="Lava">Lava</option>
+	<option value="Leatherman">Leatherman</option>
+	<option value="Lee Valley">Lee Valley</option>
+	<option value="Lego">Lego</option>
+	<option value="Leica">Leica</option>
+	<option value="Lenox">Lenco</option>
+	<option value="Lenox">Lenox</option>
+	<option value="Leviton">Leviton</option>
+	<option value="Libman">Libman</option>
+	<option value="Lie-Nielsen">Lie-Nielsen</option>
+	<option value="Lights of America">Lights of America</option>
+	<option value="Lincoln Electric">Lincoln Electric</option>
+	<option value="Lindstrom">Lindstrom</option>
+	<option value="LionSteel">LionSteel</option>
+	<option value="Lisle">Lisle</option>
+	<option value="Lista">Lista</option>
+	<option value="Little Giant">Little Giant</option>
+	<option value="Little Machine Shop">Little Machine Shop</option>
+	<option value="Little Machine Shop"></option>Loc-Line
+	<option value="Loggerhead Tools">Loggerhead Tools</option>
+	<option value="LongLife">LongLife</option>
+	<option value="Los Gatos Power">Los Gatos Power</option>
+	<option value="LoveGreen">LoveGreen</option>
+	<option value="Lufkin">Lufkin</option>
+	<option value="Lutz">Lutz</option>
+	<option value="Lurem">Lurem</option>
+	<option value="Lyon">Lyon</option>
+	<option value="Lsm">Lsm</option>
+	<option value="M.Power">M.Power</option>
+	<option value="Mac Tools">Mac Tools</option>
+	<option value="Mafell">Mafell</option>
+	<option value="Maglite">Maglite</option>
+	<option value="Magna-Matic">Magna-Matic</option>
+	<option value="Magna Cart">Magna Cart</option>
+	<option value="Make Magazine">Make Magazine</option>
+	<option value="Makerbot">Makerbot</option>
+	<option value="Makita">Makita</option>
+	<option value="Maktec">Maktec</option>
+	<option value="Mallory">Mallory</option>
+	<option value="Mallory">Malco</option>
+	<option value="Mancuso">Mancuso</option>
+	<option value="Manley">Manley</option>
+	<option value="Maratac">Maratac</option>
+	<option value="Maratac">Marson</option>
+	<option value="Martin">Martin</option>
+	<option value="Master appliance">Master appliance</option>
+	<option value="Master Palm">Master Palm</option>
+	<option value="Matco">Matco</option>
+	<option value="Mapal">Mapal</option>
+	<option value="Maxpedition">Maxpedition</option>
+	<option value="Mayes">Mayes</option>
+	<option value="Mayhew">Mayhew</option>
+	<option value="McGuire-Nicholas">McGuire-Nicholas</option>
+	<option value="McCulloch">McCulloch</option>
+	<option value="Mechanix">Mechanix</option>
+	<option value="Megapro">Megapro</option>
+	<option value="Merrick">Merrick</option>
+	<option value="Metabo">Metabo</option>
+	<option value="Micro Fence">Micro Fence</option>
+	<option value="Microflex">Microflex</option>
+	<option value="Micro Jig">Micro Jig</option>
+	<option value="MicroLux">MicroLux</option>
+	<option value="Midwest">Midwest</option>
+	<option value="Milescraft">Milescraft</option>
+	<option value="Miller">Miller</option>
+	<option value="Milwaukee">Milwaukee</option>
+	<option value="Minuteman">Minuteman</option>
+	<option value="Mitutoyo">Mitutoyo</option>
+	<option value="Mi-T-M">Mi-T-M</option>
+	<option value="MK Diamond">MK Diamond</option>
+	<option value="MK Morse">MK Morse</option>
+	<option value="MLCS">MLCS</option>
+	<option value="Mnpctech">Mnpctech</option>
+	<option value="Mobile-Shop">Mobile-Shop</option>
+	<option value="Mobius & Ruppert">Mobius & Ruppert</option>
+	<option value="MOB Peddinghaus">MOB Peddinghaus</option>
+	<option value="Moki">Moki</option>
+	<option value="Monolith Studio">Monolith Studio</option>
+	<option value="Monteverde">Monteverde</option>
+	<option value="Montezuma">Montezuma</option>
+	<option value="Moody">Moody</option>
+	<option value="Mora">Mora</option>
+	<option value="Moroso">Moroso</option>
+	<option value="Morris">Morris</option>
+	<option value="Mosely">Mosely</option>
+	<option value="Mothers">Mothers</option>
+	<option value="Multitasker">Multitasker</option>
+	<option value="Nail Jack">Nail Jack</option>
+	<option value="Nanuk">Nanuk</option>
+	<option value="Narex">Narex</option>
+	<option value="Nebo">Nebo</option>
+	<option value="Nebo Tools">Nebo Tools</option>
+	<option value="Neiko">Neiko</option>
+	<option value="Nepros">Nepros</option>
+	<option value="NES">NES</option>
+	<option value="Neutrik">Neutrik</option>
+	<option value="NewAge">NewAge</option>
+	<option value="Nexcare">Nexcare</option>
+	<option value="Nicholson">Nicholson</option>
+	<option value="Nite Ize">Nite Ize</option>
+	<option value="Norseman">Norseman</option>
+	<option value="Nova">Nova</option>
+	<option value="Numatic">Numatic</option>
+	<option value="Nupla">Nupla</option>
+	<option value="NWS">NWS</option>
+	<option value="OEM">OEM</option>
+	<option value="O'Keeffe's">O'Keeffe's</option>
+	<option value="Occidental Leather">Occidental Leather</option>
+	<option value="OLFA">OLFA</option>
+	<option value="Olight">Olight</option>
+	<option value="Olson">Olson</option>
+	<option value="Olympia">Olympia</option>
+	<option value="Oneida">Oneida</option>
+	<option value="Opinel">Opinel</option>
+	<option value="Orbis">Orbis</option>
+	<option value="OTC">OTC</option>
+	<option value="Otoro">Otoro</option>
+	<option value="Outlaw Fasteners">Outlaw Fasteners</option>
+	<option value="Painter's Pyramid">Painter's Pyramid</option>
+	<option value="Palmgren">Palmgren</option>
+	<option value="Panasonic">Panasonic</option>
+	<option value="PanaVise">PanaVise</option>
+	<option value="Park Tool">Park Tool</option>
+	<option value="Paslode">Paslode</option>
+	<option value="Paulding Tools">Paulding Tools</option>
+	<option value="PB Swiss Tools">PB Swiss Tools</option>
+	<option value="Pelican">Pelican</option>
+	<option value="Peltor">Peltor</option>
+	<option value="Pentagon Tools">Pentagon Tools</option>
+	<option value="Perles">Perles</option>
+	<option value="Pentel">Pentel</option>
+	<option value="Perceptron">Perceptron</option>
+	<option value="Perceptron">Performance tool</option>
+	<option value="Petzl">Petzl</option>
+	<option value="Picard">Picard</option>
+	<option value="Pico">Pico</option>
+	<option value="Picquic">Picquic</option>
+	<option value="PIG">PIG</option>
+	<option value="Piher">Piher</option>
+	<option value="Pilot">Pilot</option>
+	<option value="Pinnacle">Pinnacle</option>
+	<option value="Piranha Lox">Piranha Lox</option>
+	<option value="pittsburgh">pittsburgh</option>
+	<option value="Plano">Plano</option>
+	<option value="Ply Products">Ply Products</option>
+	<option value="Plyworx">Plyworx</option>
+	<option value="PocketToolX">PocketToolX</option>
+	<option value="Pomona">Pomona</option>
+	<option value="Pony">Pony</option>
+	<option value="Poulan">Poulan</option>
+	<option value="PortaMate">PortaMate</option>
+	<option value="Portland">Portland</option>
+	<option value="Porter Cable">Porter Cable</option>
+	<option value="Positec USA">Positec USA</option>
+	<option value="Power8">Power8</option>
+	<option value="Powermatic">Powermatic</option>
+	<option value="PowerPax">PowerPax</option>
+	<option value="Powers Fasteners">Powers Fasteners</option>
+	<option value="PowerStroke">PowerStroke</option>
+	<option value="Powerhouse">Powerhouse</option>
+	<option value="Pratt-Read">Pratt-Read</option>
+	<option value="Precision Sensors">Precision Sensors</option>
+	<option value="Precision Twist">Precision Twist</option>
+	<option value="Predator">Predator</option>
+	<option value="Prime Global Products">Prime Global Products</option>
+	<option value="Printrbot">Printrbot</option>
+	<option value="Pro America">Pro America</option>
+	<option value="Proform">Proform</option>
+	<option value="ProMac">ProMac</option>
+	<option value="Probemaster">Probemaster</option>
+	<option value="Pro Circuit">Pro Circuit</option>
+	<option value="Proteam">Proteam</option>
+	<option value="Prothane">Prothane</option>
+	<option value="Proto">Proto</option>
+	<option value="Ptp">Ptp</option>
+	<option value="Quantum Storage">Quantum Storage</option>
+	<option value="QuickDraw">QuickDraw</option>
+	<option value="Racor">Ranger</option>
+	<option value="Racor">Racor</option>
+	<option value="Ramset">Ramset</option>
+	<option value="Radians">Radians</option>
+	<option value="Rain-X">Rain-X</option>
+	<option value="Raven">Raven</option>
+	<option value="Rayovac">Rayovac</option>
+	<option value="Razor-Back">Razor-Back</option>
+	<option value="RCProPlus">RCProPlus</option>
+	<option value="Really Right Stuff">Really Right Stuff</option>
+	<option value="Reate">Reate</option>
+	<option value="Recoules Quakenbush">Recoules Quakenbush</option>
+	<option value="Redhead">Redhead</option>
+	<option value="Remington">Remington</option>
+	<option value="RevMark">RevMark</option>
+	<option value="Ridgid">Ridgid</option>
+	<option value="Rigol">Rigol</option>
+	<option value="Rite in the Rain">Rite in the Rain</option>
+	<option value="">Rockler</option>
+	<option value="Rockwell">Rockwell</option>
+	<option value="Rogue Supply">Rogue Supply</option>
+	<option value="Rolair">Rolair</option>
+	<option value="Roper Whitney">Roper Whitney</option>
+	<option value="RotoZip">RotoZip</option>
+	<option value="Rubbermaid">Rubbermaid</option>
+	<option value="">Ryobi</option>
+	<option value="Saf-T-Kut">Saf-T-Kut</option>
+	<option value="Sandits">Sandits</option>
+	<option value="Sandvik">Sandvik</option>
+	<option value="Sas">Sas</option>
+	<option value="Savage">Savage</option>
+	<option value="Sata">Sata</option>
+	<option value="SawStop">SawStop</option>
+	<option value="Sawtec">Sawtec</option>
+	<option value="Schaller Corp">Schaller Corp</option>
+	<option value="Scotch">Scotch</option>
+	<option value="Scott">Scott</option>
+	<option value="Screwpop">Screwpop</option>
+	<option value="Schumacher">Schumacher</option>
+	<option value="Seek Thermal">Seek Thermal</option>
+	<option value="Senco">Senco</option>
+	<option value="Senco">Sem</option>
+	<option value="Seville">Seville</option>
+	<option value="Seville Classics">Seville Classics</option>
+	<option value="Shark">Shark</option>
+	<option value="Sheffiel">Sheffiel</option>
+	<option value="Shopbot">Shopbot</option>
+	<option value="Shop Fox">Shop Fox</option>
+	<option value="Shop Vac">Shop Vac</option>
+	<option value="Shur-Line">Shur-Line</option>
+	<option value="Sidchrome">Sidchrome</option>
+	<option value="Simple Green">Simple Green</option>
+	<option value="Sjobergs">Sjobergs</option>
+	<option value="SK Hand Tool">SK Hand Tool</option>
+	<option value="Skil">Skil</option>
+	<option value="Skilsaw">Skilsaw</option>
+	<option value="Skinth">Skinth</option>
+	<option value="Slice">Slice</option>
+	<option value="SmartJars">SmartJars</option>
+	<option value="Smith">Smith</option>
+	<option value="Smith Abrasives">Smith Abrasives</option>
+	<option value="Snap-on">Snap-on</option>
+	<option value="Snap-on Industrial">Snap-on Industrial</option>
+	<option value="Snap Back">Snap Back</option>
+	<option value="Snappy">Snappy</option>
+	<option value="Snickers Workwear">Snickers Workwear</option>
+	<option value="Snow Joe">Snow Joe</option>
+	<option value="Sog">Sog</option>
+	<option value="Sonic Tools">Sonic Tools</option>
+	<option value="Sortatool">Sortatool</option>
+	<option value="Sortimo">Sortimo</option>
+	<option value="Southeast Tool">Southeast Tool</option>
+	<option value="Southwire">Southwire</option>
+	<option value="SparkFun">SparkFun</option>
+	<option value="Spax">Spax</option>
+	<option value="Spectra precision laser">Spectra precision laser</option>
+	<option value="Sperian">Sperian</option>
+	<option value="Speed blaster">Speed blaster</option>
+	<option value="Spitznas pneumatic">Spitznas pneumatic</option>
+	<option value="Spiral Supports">Spiral Supports</option>
+	<option value="Spotlight">Spotlight</option>
+	<option value="Spyderco">Spyderco</option>
+	<option value="Stack-on">Stack-on</option>
+	<option value="Staedtler">Staedtler</option>
+	<option value="Stahlwille">Stahlwille</option>
+	<option value="Stanley">Stanley</option>
+	<option value="Stanley FatMax">Stanley FatMax</option>
+	<option value="Stanley Proto">Stanley Proto</option>
+	<option value="Stanley Vidmar">Stanley Vidmar</option>
+	<option value="Starrett">Starrett</option>
+	<option value="Stedemon">Steck</option>
+	<option value="Stedemon">Stedemon</option>
+	<option value="Steelex">Steelex</option>
+	<option value="StepNGrip">StepNGrip</option>
+	<option value="Stewart MacDonald">Stewart MacDonald</option>
+	<option value="Stihl">Stihl</option>
+	<option value="Stiletto">Stiletto</option>
+	<option value="Stortech">Stortech</option>
+	<option value="Strait-Line">Strait-Line</option>
+	<option value="Stratasys">Stratasys</option>
+	<option value="Streamlight">Streamlight</option>
+	<option value="Strelka">Strelka</option>
+	<option value="Striker">Striker</option>
+	<option value="Sugru">Sugru</option>
+	<option value="Sugru">summit racing equipment</option>
+	<option value="Suncast">Suncast</option>
+	<option value="Sunex">Sunex</option>
+	<option value="Sun diagnostic tools">Sun diagnostic tools</option>
+	<option value="Superior Tool">Superior Tool</option>
+	<option value="Surebonder">Surebonder</option>
+	<option value="Surefire">Surefire</option>
+	<option value="Swanson">Swanson</option>
+	<option value="Swiss Tech">Swiss Tech</option>
+	<option value="Systainer">Systainer</option>
+	<option value="Taig">Taig</option>
+	<option value="Tajima">Tajima</option>
+	<option value="Tanos">Tanos</option>
+	<option value="Taunton">Taunton</option>
+	<option value="Tci">Tci</option>
+	<option value="TEC Accessories">TEC Accessories</option>
+	<option value="TechniEdge">TechniEdge</option>
+	<option value="Tekton">Tekton</option>
+	<option value="The UPS Store">The UPS Store</option>
+	<option value="Thexton">Thexton</option>
+	<option value="">Think Tank</option>
+	<option value="Thorsen">Thorsen</option>
+	<option value="Timberland">Timberland</option>
+	<option value="Timberland PRO">Timberland PRO</option>
+	<option value="Timbuk2">Timbuk2</option>
+	<option value="Titan">Titan</option>
+	<option value="Titebond">Titebond</option>
+	<option value="ToolChanger">Tool-Aid</option>
+	<option value="ToolAir">ToolAir</option>
+	<option value="ToolChanger">ToolChanger</option>
+	<option value="ToolHangerz">ToolHangerz</option>
+	<option value="Topeak">Topeak</option>
+	<option value="Torin">Torin</option>
+	<option value="Toro">Toro</option>
+	<option value="Toro">Tork</option>
+	<option value="ToughBuilt">ToughBuilt</option>
+	<option value="Tove">Tove</option>
+	<option value="Trend">Trend</option>
+	<option value="Triangle Tools">Triangle Tools</option>
+	<option value="Trinity">Trinity</option>
+	<option value="Triplett">Triplett</option>
+	<option value="Tripp Lite">Tripp Lite</option>
+	<option value="Triton">Triton</option>
+	<option value="Triumph">Triumph</option>
+	<option value="Tronex">Tronex</option>
+	<option value="Troy-Bilt">Troy-Bilt</option>
+	<option value="True Utilities">True Utilities</option>
+	<option value="Trusco">Trusco</option>
+	<option value="Tuff-Guard">Tuff-Guard</option>
+	<option value="Tyrolit">Tyrolit</option>
+	<option value="Ullman">Ullman</option>
+	<option value="Ultimate Garage">Ultimate Garage</option>
+	<option value="Unger">Unger</option>
+	<option value="Urko">Urko</option>
+	<option value="Uvex">Uvex</option>
+	<option value="US General">US General</option>
+	<option value="">Vacmaster</option>
+	<option value="Vampire Tools">Vampire Tools</option>
+	<option value="Vaughan">Vaughan</option>
+	<option value="Velcro">Velcro</option>
+	<option value="Ventrac">Ventrac</option>
+	<option value="Veritas">Veritas</option>
+	<option value="Vessel">Vessel</option>
+	<option value="Veto Pro Pac">Veto Pro Pac</option>
+	<option value="Vex">Vex</option>
+	<option value="Victorinox">Victorinox</option>
+	<option value="Vika">Vika</option>
+	<option value="Viking">Viking</option>
+	<option value="Viper">Viper</option>
+	<option value="Vipukirves">Vipukirves</option>
+	<option value="Vise-Grip">Vise-Grip</option>
+	<option value="Vise-Grips">Vise-Grips</option>
+	<option value="Volcanic Tool Co">Volcanic Tool Co</option>
+	<option value="vulcan">vulcan</option>
+	<option value="Wacker neuson">Wacker neuson</option>
+	<option value="Wago">Wago</option>
+	<option value="Wall Control">Wall Control</option>
+	<option value="Waterloo">Waterloo</option>
+	<option value="Watts">Watts</option>
+	<option value="WD-40">WD-40</option>
+	<option value="Weego">Weego</option>
+	<option value="Weedeater">Weedeater</option>
+	<option value="Weller">Weller</option>
+	<option value="Wen">Wen</option>
+	<option value="Wera">Wera</option>
+	<option value="Werner">Werner</option>
+	<option value="Western Forge">Western Forge</option>
+	<option value="Westling Machine Co">Westling Machine Co</option>
+	<option value="Wiha">Wiha</option>
+	<option value="Wilde">Wilde</option>
+	<option value="Williams">Williams</option>
+	<option value="Wilton">Wilton</option>
+	<option value="Wirepro">Wirepro</option>
+	<option value="Wiss">Wiss</option>
+	<option value="Witte">Witte</option>
+	<option value="Wolverine">Wolverine</option>
+	<option value="Woodline">Woodline</option>
+	<option value="WoodOwl">WoodOwl</option>
+	<option value="Woodpeckers">Woodpeckers</option>
+	<option value="WoodRiver">WoodRiver</option>
+	<option value="Woodstock">Woodstock</option>
+	<option value="Wooster">Wooster</option>
+	<option value="Workforce">Workforce</option>
+	<option value="Workshop">Workshop</option>
+	<option value="Worx">Worx</option>
+	<option value="Wright">Wright</option>
+	<option value="X-Acto">X-Acto</option>
+	<option value="Xcelite">Xcelite</option>
+	<option value="Xuron">Xuron</option>
+	<option value="Xytronic">Xytronic</option>
+	<option value="Yaktrax">Yaktrax</option>
+	<option value="">Yost</option>
+	<option value="">Zebralight</option>
+	<option value="Zero Tolerance">Zero Tolerance</option>
+	<option value="Zippkool">Zippkool</option>
+	<option value="ZipSnip">ZipSnip</option>
+	<option value="ZipWall">ZipWall</option>
+	<option value="Zircon">Zircon</option>
+  </select>
+  <br><br>
+  
+</form>
+<p>make</p>
+<form action="/action_page.php">
+  <select name="tools">
+    <option value="Altendorf GmbH">Altendorf GmbH</option>
+    <option value="Apex Tool Group (ATG)">Apex Tool Group (ATG)</option>
+    <option value="Atlas Copco" selected>Atlas Copco</option>
+    <option value="Bad Dog Tools">Bad Dog Tools</option>
+	<option value="BN Products – USA, LLC">BN Products – USA, LLC</option>
+	<option value="black and decker and stanley">black and decker and stanley</option>
+	<option value="Diamond Products">Diamond Products</option>
+	<option value="Emerson">Emerson</option>
+	<option value="Fein">Fein</option>
+	<option value="Flex-Elektrowerkzeuge">Flex-Elektrowerkzeuge</option>
+	<option value="General Tools & Instruments LLC">General Tools & Instruments LLC</option>
+	<option value="Gray Tools">Gray Tools</option>
+	<option value="Great Neck">Great Neck</option>
+	<option value="Harbor Freight Tools">Harbor Freight Tools</option>  Hilti
+	<option value="Hitachi Koki">Hitachi Koki</option> 
+	<option value="Husqvarna Group">Husqvarna Group</option>
+	<option value="Ideal Industries">Ideal Industries</option>	
+	<option value="Illinois Tool Works">Illinois Tool Works</option>
+	<option value="Ingersoll-Rand">Ingersoll-Rand</option>
+	<option value="JPW Industries">JPW Industries</option>
+	<option value="Knipex">Knipex</option>
+	<option value="Lee Valley Tools">Lee Valley Tools</option>
+	<option value="Lie-Nielsen Toolworks">Lie-Nielsen Toolworks</option>
+	<option value="Mafell">Mafell</option>
+	<option value="Makita">Makita</option>
+	<option value="Master Air Tool Ltd Co">Master Air Tool Ltd Co</option>
+	<option value="OLFA">OLFA</option>
+	<option value="Panasonic">Panasonic</option>
+	<option value="Perles">Perles</option>
+	<option value="Positec">Positec</option>
+	<option value="Robert Bosch GmbH">Robert Bosch GmbH</option>
+	<option value="Sandvik">Sandvik</option>
+	<option value="Snap-on">Snap-on</option>
+	<option value="ANDREAS STIHL AG & Co">ANDREAS STIHL AG & Co</option>
+	<option value="TTI">TTI</option>
+	<option value="TTS Tooltechnic Systems">TTS Tooltechnic Systems</option>
+	<option value="United Pacific Industries Ltd">United Pacific Industries Ltd</option>
+	<option value="Artfxwoodworks">Artfxwoodworks</option>
+	<option value="Werner Co">Werner Co</option>
+	<option value="VIS, LLC">VIS, LLC</option>
+  </select>
+  <br><br>
+
+</form>
+<p>products</p>
+
+<form action="/action_page.php">
+  <select name="products">
+    <option value="tablesaw">table saw</option>
+    <option value="panelsaw">panel saw</option>
+    <option value="adjustablewrench" selected>adjustable wrench</option>
+    <option value="industrial hand tool">industrial hand tool</option>
+	<option value="power tool">power tool</option>
+	<option value="storage">storage</option>
+	<option value="cutting">cutting</option>
+	<option value="drilling">drilling</option>
+	<option value="routing tool">routing tool</option>
+	<option value="abrading">abrading</option>
+	<option value="boring tool">boring tool</option>
+	<option value="shop vacuum">shop vacuum</option>
+	<option value="measuring tool">measuring tool</option>
+	<option value="hammer drill">hammer drill</option>
+	<option value="stationary machine">stationary machine</option>
+	<option value="outdoor power equipment">outdoor power equipment<option>
+	<option value="fastening tool">fastening tool</option>
+	<option value="air tool">air tool</option>
+	<option value="hand tool">hand tool</option>
+	<option value="diagnostic">diagnostic</option>
+	<option value="automotive">automotive</option>
+	<option value="gardening">gardening</option>
+	<option value="ladders">ladders</option>
+	<option value="pliers">pliers</option>
+	<option value="planes">planes</option>
+	<option value="router table">router table</option>
+	<option value="sharpening">sharpening</option>
+	<option value="sander">sander</option>
+	<option value="lawn">lawn</option>
+	<option value="rotary tools">rotary tools</option>
+	<option value="paint gun">paint gun</option>
+	<option value="air compressor">air compressor</option>
+	<option value="circular saw">circular saw</option>
+  </select>
+  <br><br>
+
+</form>
+<p>years owned</p>
+
+<form action="/action_page.php">
+  <select name="cars">
+      <option value="1month">1month</option>
+    <option value="2month">2month</option>
+    <option value="3month" selected>3month</option>
+    <option value="4month">4month</option>
+	<option value="5month">5month</option>
+	<option value="6month">6month</option>
+	<option value="7month">7month</option>
+	<option value="8month">8month</option>
+	<option value="9month">9month</option>
+	<option value="10month">10month</option>
+	<option value="11month">11month</option>
+	<option value="1year">1year</option>
+	<option value="2year">2year</option>
+	<option value="3year">3year</option>
+	<option value="4year">4year</option>
+	<option value="5year">5year<option>
+	<option value="6year">6year</option>
+	<option value="7year">7year</option>
+	<option value="8year">8year</option>
+	<option value="9year">9year</option>
+	<option value="10year">10year</option>
+	<option value="11year">11year</option>
+	<option value="12year">12year</option>
+	<option value="13year">13year</option>
+	<option value="14year">14year</option>
+	<option value="15year">15year</option>
+	<option value="16year">16year</option>
+	<option value="17year">17year</option>
+	<option value="18year">18year</option>
+	<option value="19year">19year</option>
+	<option value="20year">20year</option>
+	<option value="21years">21years</option>
+	<option value="22years">22years</option>
+	<option value="23years">23years</option>
+	<option value="24years">24years</option>
+	<option value="25years">25years</option>
+  </select>
+  <br><br>
+  <input type="submit">
+</form>
+<div class="container">
+			<div class="slider_wrapper">
+				<ul id="image_slider">
+					<li><img src="C:\Users\mpc\Desktop\tool pics\restaurant-recruiting-tools.jpg"></li>
+					<li><img src="C:\Users\mpc\Desktop\tool pics\tools.jpg"></li>
+					<li><img src="C:\Users\mpc\Desktop\tool pics\Tool-Wall.jpg"></li>
+					<li><img src="C:\Users\mpc\Desktop\tool pics\content-panel-desktop.jpg"></li>
+					<li><img src="C:\Users\mpc\Desktop\tool pics\cat830992_1.jpg"></li>
+					<li><img src="C:\Users\mpc\Desktop\tool pics\catalog%20tools%20image.jpg"></li>
+				</ul>					
+				<span class="nvgt" id="prev"></span>
+				<span class="nvgt" id="next"></span>
+			</div>
+		</div>					
+<FORM action="/scripts/as_web7.exe" method="Get">
+<INPUT Type=Hidden Name=Command Value=Search>
+<INPUT Type=Hidden Name=File value="DATAFILE.ASK"> 
+
+Search For: <INPUT Type=text Size=45 Name=Request>
+<INPUT Type=submit Value=Search><BR>
+
+Options: <SELECT id=ViewName Name=ViewName>
+<OPTION>(Default)</OPTION>
+<OPTION>(Summary)</OPTION>
+<OPTION>(Detailed)</OPTION>
+<OPTION>(Entire Page)</OPTION>
+
+</SELECT>
+<SELECT id=NumRows Name=NumRows>
+<OPTION value=10>10 results per page</OPTION>
+<OPTION value=20>20 results per page</OPTION>
+<OPTION value=30>30 results per page</OPTION>
+<OPTION value=40>40 results per page</OPTION>
+<OPTION value=50>50 results per page</OPTION>
+</SELECT>
+</FORM>
+<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div style='overflow:hidden;height:420px;width:400px;'><div id='gmap_canvas' style='height:420px;width:400px;'></div><div><small><a href="http://embedgooglemaps.com">Click here to generate your map!</a></small></div><div><small><a href="http://www.genkigirl.net/">buy website traffic</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:10,center:new google.maps.LatLng(38.7044609,-93.22826129999998),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(38.7044609,-93.22826129999998)});infowindow = new google.maps.InfoWindow({content:'<strong>map</strong><br>sedalia mo<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+	<div id="button"><a href="more.html">More Tool Info</a></div>
+		<form action="http://www.google.com" method="post">
+			<input type="text" id="searchBar" placeholder="" value="search..." maxlength="25" autocomplete="on" onMouseDown="active();" onblur="inactive();" /><input type="submit" id="searchBtn" value="Go" />
+
+		</form>
+	<div class="footer">
+	&copy;2017 Toolookup
+	</div>
+	</body>
+</html>

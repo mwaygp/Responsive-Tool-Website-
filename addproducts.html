@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>navagation bar</title>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<meta name="viewport" content="width=device-width intial-scale=1">
+		<link type='text/css' rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+	<style>
+body {
+	font-family: sans-serif;
+	background: ;
+}
+.box {
+	text-align: center;
+	padding-top: px;
+	width: 250px;
+	-webkit-transition: all .2s;
+	background: #adad85;
+	line-height: 50px;
+	text-align: center;
+	font-weight: bold;
+	color: #333;
+	border-radius: 5px;
+	box-shadow: 0px 0px 2px rgba(0,0,0,.5);
+		1px 1px 5px rgba(0,0,0,.3);
+	cursor: pointer;	
+	position: absolute;
+	top: 230px;
+	left: 12%;
+	
+}
+.box:hover {
+	background: skyblue;
+	color: #e3e3e3;
+}
+	a:link{
+width:130px;
+display:block;
+padding:15px;
+color: white;
+text-decoration:none;
+font-family:verdana;
+font-size:20px;
+text-align:center;
+text-transform:uppercase;
+}
+input[type=text] {
+    margin-top:20px;
+	width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 100%;
+}	
+.footer {
+margin-bottom: 0px;
+margin: ;
+width: px;
+padding: px;
+background: ;
+border: 1px solid #000000;
+}	
+h2 {
+font-size: 50px;
+position: absolute;
+top: 80px;
+border: 1px solid black;
+width: 550px;
+height: 300px;
+text-align: center;
+line-height: 80px;
+overflow: hidden;
+padding-top: 10px;
+background: #ffffff;
+color:;
+}
+p {
+font-size: 40px;
+position: absolute;
+top: 150px;
+border: px solid black;
+width: 550px;
+height: 250px;
+text-align: center;
+line-height: 80px;
+overflow: hidden;
+padding-top: 10px;
+}
+body {
+    font-family: "Lato", sans-serif;
+	background: white;
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+	position: ;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+	</style>
+	</head>
+<body>
+
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+	<div id="header">
+		<div id="logo">
+			<img src="C:\Users\mpc\Desktop\tooloookup.png"/>
+		<ul id="navbar">
+			<li><a href="home.html">Home</a></li>
+			<li><a href="tools.html">Tools</a></li>
+			<li><a href="products.html" id="onlink">Products</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="login.html">login</a></li>
+		<li>
+ <form action="http://www.google.com" method="get" id="search-box">
+  <input type="text" name="search" name="q" maxlength="120" placeholder="Search..">
+</form>
+
+</li>
+		</ul>
+	</div>		
+	 <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="home.html">Home</a>
+  <a href="tools.html">Tools</a>
+  <a href="about.html">About</a>
+  <a href="login.html">Login</a>
+  <a href="contact.html">contacts</a>
+  <a href="products.html">products</a>
+</div>
+
+<div id="main">
+ 
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+</div>
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+	 <div>
+		<div class="jumbotron">                
+            <div class="container">
+                <h1>Insert PRODUCT info</h1>
+			<div class="container">
+                <div id="Search"</div>
+                    <form>
+                        <form class="form-inline">
+                    <form action="index.php" method="get">
+                    <fieldset>
+                        <label>Title of tool</label>
+                        <input type="text" class="form-control" id="title" name="title"/>
+                       
+                    </fieldset>
+                    </form>
+            <div class="container">
+                <div id="data"</div>
+                <table>
+                    <table class="table">
+                        <thead>
+                            <th>tool Title</th>
+							<input type="text" class="form-control" id="title" name="title"/>
+                            <th>brand</th>
+							 <input type="text" class="form-control" id="title" name="title"/>
+                            <th>make</th>
+							 <input type="text" class="form-control" id="title" name="title"/>
+                            <th>Price</th>
+							 <input type="text" class="form-control" id="title" name="title"/>
+                            <th>Platform</th>
+							 <input type="submit" value="insert" class="btn btn-default"/>
+						</thead>
+               
+                </table>
+    </div>
+
+
+</div>
+	<div class="footer">
+	&copy;2017 Toolookup
+	</div>
+	</body>
+</html>

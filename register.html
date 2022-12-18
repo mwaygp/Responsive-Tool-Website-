@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PHP insertion</title>
+<link type="text/css" rel="stylesheet" href="insert.css" />
+<style>
+@import "http://fonts.googleapis.com/css?family=Droid+Serif";
+/* The Above Line Is To Import Google Font Style */
+.maindiv {
+margin:30px auto;
+width:580px;
+height:300px;
+background:#fff;
+padding-top:20px;
+font-family:'Droid Serif',serif;
+font-size:14px
+}
+.title {
+width:500px;
+height:70px;
+text-shadow:2px 2px 2px #cfcfcf;
+font-size:16px;
+text-align:center
+}
+.form_div {
+width:70px;
+float:left
+}
+form {
+width:350px;
+border:px dashed #aaa;
+padding:10px 30px 40px;
+margin-left:90px;
+background-color:#f0f8ff;
+}
+form h2 {
+text-align:center;
+text-shadow:2px 2px 2px #cfcfcf
+}
+textarea {
+width:100%;
+height:60px;
+border-radius:1px;
+box-shadow:0 0 1px 2px #123456;
+margin-top:10px;
+padding:7px;
+border:none
+}
+.input {
+width:100%;
+height:30px;
+border-radius:2px;
+box-shadow:0 0 1px 2px #123456;
+margin-top:10px;
+padding:7px;
+border:none;
+margin-bottom:20px
+}
+.submit {
+color:#fff;
+border-radius:3px;
+background:#1F8DD6;
+padding:5px;
+margin-top:40px;
+border:none;
+width:100%;
+height:30px;
+box-shadow:0 0 1px 2px #123456;
+font-size:18px
+}
+p {
+color:red;
+text-align:center
+}
+span {
+text-align:center;
+color:green
+}
+*{margin: 0px; padding: 0px;}
+body{background: url("");}
+#header{width100px;height: 80px;background: #333;box-shadow: ;}
+#navbar{width:1180px;height: 80px; border:1px; solid white;float:right;} 
+#navbar>li{width: 190px;list-style: none;float: left;border-right: px solid gray;border-left: px solid gray;}
+li>a{display: block;color: white;line-height: 80px;
+	text-align: center;font-family: cursive;font-size: 20px;width:130px;text-decoration: none;}
+#logo{width: px;height: 200px;float: left;padding-left: 40px;}
+	li>a:hover,
+li>a:focus{background: skyblue;color: #333;}
+@media screen and (max-width:1260px){
+	#navbar{width:800px;} 
+	#navbar>li{width: 150px;}
+	#logo{width: 150px;height: 80px;}
+}
+@media screen and (max-width: 1060px;){
+	#header{width100%;height: 600px;position: relative;top:80px;}
+	#navbar{width:100%;height: 60px;float:right;} 
+	#navbar>li{width:18%;}
+	li>a{line-height: 60%;font-size: 16px;}
+	#logo{width: 200px;height: 80px;float: left;padding-left: 40px;position: absolute;top:-80px;}
+}
+@media screen and (max-width: 480px){
+	#header{width:100%;height: 60px;
+	#navbar{width:100%;height: 60px;float:none;} 
+	#navbar>li{width: 100%;list-style: none;float: none;border-bottom:1px solid skyblue;}
+	li>a{display: block;color: white;line-height: 60px;font-size: 16px;background: #333;}
+}
+a:link{
+width:130px;
+display: block;
+padding:15px;
+color:white;
+text-decoration:none;
+font-family:verdana;
+font-size:20px;
+text-align:center;
+text-transform: uppercase;
+}
+input[type=text] {
+    margin-top:20px;
+	width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 100%;
+}
+body {
+    font-family: "Lato", sans-serif;
+	background: #fff;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #333;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}	
+</style>
+</head>
+<body>
+	<div id="header">
+		<div id="logo">
+			<img src="C:\Users\mpc\Desktop\tooloookup.png"/>
+		<ul id="navbar">
+			<li><a href="home.html">Home</a></li>
+			<li><a href="tools.html">Tools</a></li>
+			<li><a href="products.html">Products</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="login.html">Login</a></li>
+		</ul>
+	</div>	
+			<div id="mySidenav" class="sidenav">
+  <a href="login.html">LOGIN</a>
+ 
+</div>
+
+<div id="main">
+
+  <span >&#9776; </span>
+</div>
+<div class="maindiv">
+<!--HTML Form -->
+<div class="form_div">
+<form action="insert.php" method="post">
+<!-- Method can be set as POST for hiding values in URL-->
+<h2>register</h2>
+<label>Name:</label>
+<input class="input" name="name" type="text" value="">
+<label>Email:</label>
+<input class="input" name="email" type="text" value="">
+<label>password:</label>
+<input class="input" name="password" type="text" value="">
+<label>confirm password:</label>
+<input class="input" name="password" type="text" value="">
+<input class="submit" name="submit" type="submit" value="Register">
+</form>
+</div>
+</div>
+</body>
+</html>
